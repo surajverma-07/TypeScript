@@ -1,3 +1,5 @@
+//How to check type in parameter
+
 function getFiveMul(num:number){
     return num*5;
 }
@@ -13,4 +15,46 @@ let signUp = (name:string,email:string,isAuthorized:boolean = false) =>{
 
 // console.log(getUpper(5));
 console.log(getUpper("suraj"));
+
+// About Returning type 
+function getFiveSum(num:number):number{
+    return num+5;
+
+    // return "suraj";
+    //without allocating fn():type it is allow but after it gives the error that return type is not a string which helps 
+}
+getFiveSum(20);
+
+let arrowExample = (str:string):string=>{
+    return "";
+}
+
+// function giveNumber(num:number):boolean{
+//     if(num<0){
+//         return false;
+//     }else{
+//         return 100;
+//     }
+// }//we can't decide type earlier if we have more than one data type to be return 
+
+// const heros = ["mahi","kohli","suraj"];
+const heros = [7,18,7];
+//in map function ts automatically fetch wheather array is a collection of number , string or any other data type
+//but for return string we have to do additional checking  
+heros.map((hero):string=>{
+    // return 7;
+    return `hero is ${hero}`;
+})
+
+function consoleError(errorMsg:string):void{
+  console.log(errorMsg);
+}
+
+function handleError(errorMsg:string):never{
+  throw new Error(errorMsg);
+}
+consoleError("error");
+handleError("error");
+
+
 export {}
