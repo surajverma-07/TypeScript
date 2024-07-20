@@ -1,11 +1,15 @@
 "use strict";
+// const User = {
+//     name:"suraj",
+//     email:"suraj@gmail.com",
+//     isActive:true 
+// }
 Object.defineProperty(exports, "__esModule", { value: true });
-var User = {
+var user = {
+    _id: "3434q5",
     name: "suraj",
     email: "suraj@gmail.com",
-    isActive: true
+    isActive: true,
+    creditCard: 42342 //not neccessary to provide it's an optional property of the object 
 };
-function createUser(_a) {
-    var string = _a.name, _b = _a.isPaid, boolean = _b === void 0 ? false : _b;
-}
-createUser({ name: "suraj", isPaid: false });
+user.name = "suraj kumar verma ";

@@ -18,23 +18,42 @@
 // createCourse();
 
 
+// type User = {
+//     name:string;
+//     email:string;
+//     isActive:boolean;
+// }
+
+// //we can declare a type (user defained ) and use like this 
+// function createUser(user:User):User{
+//     // return {};
+//     return user;
+// }
+
+// // createUser({});//gives an error bcz we have to provide proper type of it
+// createUser({name:"suraj",email:"suraj",isActive:true});
+
+
 type User = {
-    name:string;
-    email:string;
-    isActive:boolean;
+    readonly _id: string;//it is not modified once declared bcz of readonly property
+    name: string;
+    email: string;
+    isActive: boolean;
+    creditCard?: number;// ? means it is optional to pass or not 
 }
 
-//we can declare a type (user defained ) and use like this 
-function createUser(user:User):User{
-    // return {};
-    return user;
+let user: User = {
+    _id: "3434q5",
+    name: "suraj",
+    email: "suraj@gmail.com",
+    isActive: true,
+    creditCard: 42342 //not neccessary to provide it's an optional property of the object 
 }
 
-// createUser({});//gives an error bcz we have to provide proper type of it
-createUser({name:"suraj",email:"suraj",isActive:true});
+user.name = "suraj kumar verma ";
+// user._id="3432r";//we can't overwrite the value of _id because it is readonly 
 
 
 
 
-
-export {}
+export { }
