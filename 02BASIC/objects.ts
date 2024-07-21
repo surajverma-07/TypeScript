@@ -53,6 +53,21 @@ let user: User = {
 user.name = "suraj kumar verma ";
 // user._id="3432r";//we can't overwrite the value of _id because it is readonly 
 
+type cardNumber = {
+    cardnumber:string;
+}
+type cardExpired = {
+    cardexpired:boolean;
+}
+type cardDetails = cardNumber & cardExpired & {
+    cardDate:string;
+};
+
+function cardDetailsInput (carddetails:cardDetails):cardDetails{
+  return carddetails;
+}
+
+cardDetailsInput({cardexpired:true,cardnumber:"jayshreeram",cardDate:"34-34-3423"});
 
 
 
