@@ -1,4 +1,4 @@
-enum SeatChoice {
+const enum SeatChoice {
     AISLE = "aisle",
     MIDDLE = "middle",
     WINDOW = 1,
@@ -6,3 +6,5 @@ enum SeatChoice {
 }
 
 const surajSeat = SeatChoice.AISLE; 
+
+export {}
