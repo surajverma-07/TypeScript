@@ -7,9 +7,21 @@ interface User {
     startTrial():string
     getCoupon(couponname:string,value:number):number
 }
+//reopening of the interface we doesn't need to edit above 1 instead this reopening update the actual one
+interface User{
+    githubId:string 
+}
 
-const suraj:User = {
+//Inheritance in interface
+interface Admin extends User{
+    role: "admin" | "learner"
+}
+
+// const suraj:User = {
+const suraj:Admin = {
     dbId:77,
+    role:"admin",
+    githubId:"jayshreeram",
     email:"suraj@suraj.com",
     userId:23844,
     // startTrial:()=>{return "suraj"}
