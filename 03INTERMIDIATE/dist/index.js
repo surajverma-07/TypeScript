@@ -17,6 +17,10 @@ class User {
         this.name = name;
         this.city = "Raipur";
         this.course_count = 1;
+        this.emp_count = 1;
+    }
+    deleteToken() {
+        console.log("Token Deleted Successfully ");
     }
     // Getter and Setter Methods are use to get or set private member/var of the class because they are not accessable outside the class
     get getEmail() {
@@ -29,3 +33,10 @@ class User {
         this.course_count = course_count;
     }
 }
+class AndroidUser extends User {
+    CourseCount() {
+        // return this.course_count; can't access private member 
+        let androidCount = this.emp_count / 2; //protected can be used in extended user
+    }
+}
+const suraj = new User("suraj@gmail.com", "Suraj Kumar Verma");
